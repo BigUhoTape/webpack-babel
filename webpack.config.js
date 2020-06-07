@@ -37,11 +37,21 @@ module.exports = {
           }
         ]
       },
+      // Loading css
       {
         test: /\.(css)$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" }
+        ]
+      },
+      // Loding scss/sass
+      {
+        test: /\.(s[ca]ss)$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
         ]
       }
     ]
